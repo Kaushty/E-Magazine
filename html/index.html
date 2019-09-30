@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WE-Mag : VCET's Magazine for Tech, Sports and Expression</title>
+    <link rel = "stylesheet" type="text/css" href="indexStyle.css">
+  </head>
+
+  <body>
+    <div class ="header">
+        <h5>Vidyavardhini's College of Engineering and Technology</h5>
+        <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="C:\xampp\htdocs\E-Magazine\img\vcetlogoW-150x150.png" alt="Image not found">
+                <a href ="https://www.vcet.edu.in"></a>
+              </div>
+              <div class="flip-box-back">
+                <img src="C:\xampp\htdocs\E-Magazine\img\vcetlogoW-150x150.png" alt="Image not found">
+                <a href ="https://www.vcet.edu.in"></a>
+              </div>
+            </div>
+        </div>
+        <h1>WE-MAG</h1>
+        <h6>VCET's Magazine for Tech, Sports and Expression</h6>
+    </div>
+
+    <button class="tablink" onclick="openEvent('ZEAL', this)" id="defaultOpen">#ZEAL</button>
+    <button class="tablink" onclick="openEvent('AVAHAN', this)">#AVAHAN</button>
+    <button class="tablink" onclick="openEvent('VNPS', this)">#VNPS</button>
+    <button class="tablink" onclick="openEvent('ETHAN', this)">#ETHAN</button>
+    <button class="tablink" onclick="openEvent('ABACUS', this)">#ABACUS</button>
+    <button class="tablink" onclick="openEvent('EXPRESS', this)">#EXPRESS</button>
+    <button class="tablink" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </button>
+
+
+    <div class = "tabcontent" id = "Zeal">
+
+    </div>
+
+    <div class = "tabcontent" id = "Avahan">
+
+    </div>
+
+    <div class = "tabcontent" id = "VNPS">
+
+    </div>
+
+    <div class = "tabcontent" id = "Ethan">
+
+    </div>
+
+    <div class = "tabcontent" id = "Abacus">
+        <img src = "C:\xampp\htdocs\E-Magazine\img\abacus.jpg"></img>
+    </div>
+
+
+
+
+    <script>
+          function openEvent(eventName,elmnt) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(eventName).style.display = "block";
+            //elmnt.style.backgroundColor = color;
+            document.getElementById("defaultOpen").click();
+          }
+
+      </script>
+
+      <script>
+            function myFunction(x) {
+              x.classList.toggle("change");
+
+            }
+      </script>
+      <div class = "container">
+
+      </div>
+
+      <div class = "footer">
+          
+      </div>
+  </body>
+
+</html>
