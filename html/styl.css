@@ -5,13 +5,55 @@
   font-family: Georgia, serif;
   box-sizing: border-box;
 }
-
 body{
   min-height: 100vh;
-  background-image: linear-gradient(120deg,rgb(74,13,143) 0%,rgba(250, 42, 143)100%);
-  overflow: auto;
+  background-image: linear-gradient(120deg,rgb(74,13,143) 0%,rgba(250, 42, 143)100%)
 }
-
+.HomeButton{
+  float: right;
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
+  margin-top: 25px;
+  color: #ffffff;
+  font-size: 16px;
+  margin-right: 400px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+  text-decoration: none;
+  color: rgba(255,255,255,1);
+  transition: 0.3s ease;
+}
+ul li a:hover{
+  border: 1px  solid #fff;
+  padding: 6px 20px;
+  color:  #ffffff;
+  border-radius: 3px;
+}
+.upload-form h2{
+  margin-top: -20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.upload-form{
+  text-align: center;
+  padding: 50px;
+}
+.upload-form button{
+  border-radius: 10px;
+}
+.upload-form .input{
+  width: 250px;
+  height: 30px;
+}
+.upload-form .blogtext{
+  width: 400px;
+  height: 200px;
+}
 .login-form{
   width: 360px;
   background: #f1f1f1;
@@ -23,35 +65,15 @@ body{
   top: 50%;
   transform: translate(-50%,-50%);
 }
-
 .login-form h2{
   text-align: center;
   margin-bottom: 60px;
 }
-
-.adminlogin-form{
-  width: 360px;
-  background: #f1f1f1;
-  height: 580px;
-  padding: 80px 40px;
-  border-radius: 10px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-}
-
-.adminlogin-form h2{
-  text-align: center;
-  margin-bottom: 60px;
-}
-
 .input-group{
   border-bottom: 2px solid #adadad;
   position: relative;
   margin: 30px 0;
 }
-
 .input-group input{
   font-size: 15px;
   color: #333;
@@ -62,7 +84,6 @@ body{
   padding: 0 5px;
   height: 40px;
 }
-
 .input-group span::before{
   content: attr(data-placeholder);
   position: absolute;
@@ -73,7 +94,6 @@ body{
   z-index: -1;
   transition: .5s;
 }
-
 .input-group span::after{
   content:'';
   position: absolute;
@@ -82,39 +102,33 @@ body{
   background: linear-gradient(120deg,#3498db,#8e44ad);
   transition: .5s;
 }
-
 .focus+span::before{
   top: -5px;
-
 }
 .focus+span::after{
   width: 100%;
   position: absolute;
 }
-
 .btn{
   display: block;
   width: 100%;
   height: 50px;
   border: none;
-  background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+  background: linear-gradient(120deg,rgb(94,23,143) 0%,rgba(250, 42, 53));
   background-size: 200%;
   color: #fff;
   outline: none;
   cursor: pointer;
   transition: .5s;
 }
-
 .btn:hover{
   background-position: right;
 }
-
 .bottom-text{
   margin-top: 40px;
   text-align: center;
   font-size: 13px;
 }
-
 .register-form{
   width: 360px;
   background: #f1f1f1;
@@ -126,12 +140,10 @@ body{
   top: 50%;
   transform: translate(-50%,-50%);
 }
-
 .register-form h2{
   text-align: center;
   margin-bottom: 60px;
 }
-
 .upload-form{
   width: 620px;
   background: #f1f1f1;
@@ -146,9 +158,7 @@ body{
   border: solid;
   border-color: #ffffff;
   overflow-y: auto;
-
 }
-
 .split {
   height: 100%;
   width: 50%;
@@ -158,18 +168,12 @@ body{
   overflow-x: hidden;
   padding-top: 20px;
 }
-
 .left {
   left: 0;
-
 }
-
 .right {
   right: 0;
-
-
 }
-
 .centered {
   position: absolute;
   top: 50%;
@@ -177,87 +181,7 @@ body{
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
 .p{
   text-align: center;
   font-size: 14px;
-}
-
-.image-form{
-  width: 620px;
-  background: #f1f1f1;
-  height: 620px;
-  padding: 80px 40px;
-  border-radius: 10px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  border-width: 20px;
-  border: solid;
-  border-color: #ffffff;
-  overflow-y: auto;
-
-}
-#footer{
-  background: #E3F0F7;
-}
-.college-details{
-	overflow: hidden;
-	padding: 3em 0em;
-	background: #E3F0F7;
-	text-align: center;
-	margin-top: 5em;
-}
-
-#footer #col1,
-#footer #col2,
-#footer #col3{
-	float: left;
-	width: 320px;
-	padding: 0px 40px 0px 40px;
-}
-
-#footer #icon{
-    display: block;
-    margin-bottom: 1em;
-    font-size: 3em;
-}
-
-.socialmedia
-{
-    overflow: hidden;
-    padding: 3em 0em;
-    border-top: 20px solid rgba(255, 255, 255, 0.08);
-    text-align: center;
-    background: #4CAF50;
-}
-
-.socialmedia a
-{
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-* Styling Social Icons */
-ul.contact{
-    margin: 0;
-    padding: 2em 0em 0em 0em;
-    list-style: none;
-}
-
-ul.contact li{
-    display: inline-block;
-    padding: 0em 0.10em;
-    font-size: 1em;
-}
-
-ul.contact li a{
-    color: #FFF;
-    display: inline-block;
-    background: #4C93B9;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
 }

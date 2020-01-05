@@ -1,97 +1,113 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>WE-Mag : VCET's Magazine for Tech, Sports and Expression</title>
     <link rel = "stylesheet" type="text/css" href="indexStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
   </head>
-
   <body>
+    <div class="list">
+      <ul>
+        <li><a class="HomeButton" href="adminLogin.php">Admin</a></li>
+        <li><a class="ReachUs" href="register.php">Register</a></li>
+        <li><a class="LoginText" href="login.php">Login</a></li>
+      </ul>
+    </div>
     <div class ="header">
         <h5>Vidyavardhini's College of Engineering and Technology</h5>
-        <div class="flip-box">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img src="C:\xampp\htdocs\E-Magazine\img\vcetlogoW-150x150.png" alt="Image not found">
-                <a href ="https://www.vcet.edu.in"></a>
-              </div>
-              <div class="flip-box-back">
-                <img src="C:\xampp\htdocs\E-Magazine\img\vcetlogoW-150x150.png" alt="Image not found">
-                <a href ="https://www.vcet.edu.in"></a>
-              </div>
-            </div>
-        </div>
-        <h1>WE-MAG</h1>
+                <a href ="https://www.vcet.edu.in"><img src="..\img\vcetlogoW-150x150.png" alt="Image not found"></img></a>
+        <h1><span>WE-</span>MAG</h1>
         <h6>VCET's Magazine for Tech, Sports and Expression</h6>
     </div>
-
-    <button class="tablink" onclick="openEvent('ZEAL', this)" id="defaultOpen">#ZEAL</button>
-    <button class="tablink" onclick="openEvent('AVAHAN', this)">#AVAHAN</button>
-    <button class="tablink" onclick="openEvent('VNPS', this)">#VNPS</button>
-    <button class="tablink" onclick="openEvent('ETHAN', this)">#ETHAN</button>
-    <button class="tablink" onclick="openEvent('ABACUS', this)">#ABACUS</button>
-    <button class="tablink" onclick="openEvent('EXPRESS', this)">#EXPRESS</button>
-    <button class="tablink" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-    </button>
-
-
-    <div class = "tabcontent" id = "Zeal">
-
-    </div>
-
-    <div class = "tabcontent" id = "Avahan">
-
-    </div>
-
-    <div class = "tabcontent" id = "VNPS">
-
-    </div>
-
-    <div class = "tabcontent" id = "Ethan">
-
-    </div>
-
-    <div class = "tabcontent" id = "Abacus">
-        <img src = "C:\xampp\htdocs\E-Magazine\img\abacus.jpg"></img>
-    </div>
-
-
-
-
-    <script>
-          function openEvent(eventName,elmnt) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-              tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-              tablinks[i].style.backgroundColor = "";
-            }
-            document.getElementById(eventName).style.display = "block";
-            //elmnt.style.backgroundColor = color;
-            document.getElementById("defaultOpen").click();
-          }
-
-      </script>
-
       <script>
             function myFunction(x) {
-              x.classList.toggle("change");
-
+              var btn = document.getElementById('submit');
+              btn.addEventListener('click', function() {
+              document.location.href = 'userSubmit.php';
+              });
             }
       </script>
       <div class = "container">
-
+        <div class="photos">
+            <a href="zeal.html" target="_blank">
+              <img id="zeal" src="..\img\zeal_logo.jfif" alt="Zeal">
+            </a>
+            <a href="#">
+              <img id="avahan" src="..\img\avahan_logo2.png" alt="Avahan">
+            </a>
+            <a href="csi.php">
+              <img id="csi" src="..\img\csi_logo.jpg" alt="Csi">
+            </a>
+            <a href="#">
+              <img id="hackathon" src="..\img\hack_logo.jfif" alt="Hackathon">
+            </a>
+            <a href="#">
+              <img id="ethan" src="..\img\ethan_logo2.jpg" alt="Ethan">
+            </a>
+            <a href="express.php">
+              <img id="express" src="..\img\express.jpg" alt="Express">
+            </a>
+        </div>
+        <div class="submit">
+          <button type="submit" name="btn_sub" onclick="myFunction(this)" id = "submit"><span><b> SUBMIT &nbsp; POST </b></span></button>
+        </div>
       </div>
-
-      <div class = "footer">
-          
+<div class="footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h1 class="logo-text"><span>WE-</span>MAG</h1>
+      <p>
+        <br>
+        We-Mag is a public online magazine website developed by the <br>
+           budding engineers of VCET.<br><br><br>
+      </p>
+      <div class="contact">
+        <span><i class="fas fa-phone" ></i> &nbsp;Telephone: 0250 233 8234</span>
+        <span><i class="fas fa-envelop" ></i> &nbsp; vcet.info@edu.in</span>
+        <br>
       </div>
+      <div class="socials">
+        <a href="https://www.facebook.com/vidyavardhinicollege/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_v.c.e.t_/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/school/vcetvasai/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCjBw5a7WU00GwkxaTjF9jqg"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <br>
+      <ul>
+        <a href="#" color="#ffffff"><li>ZEAL</li></a>
+        <a href="#"><li>Avahan</li></a>
+        <a href="csi.php"><li>CSI</li></a>
+        <a href="#"><li>Ethan</li></a>
+        <a href="#"><li>Hackathon</li></a>
+        <a href="#"><li>EXPRESS</li></a>
+      </ul>
+    </div>
+    <div class="footer-section contact">
+      <h2>Reach us</h2>
+      <br>
+      <form class="" action="index.html" method="post">
+        <input class="contact-text email" type="email" name="email" placeholder="Email Address"><br>
+        <textarea name="message" class="contact-text pass" placeholder="Your Message .."></textarea>
+        <br>
+        <button type="submit" class="btn-big" name="button">
+          <i class ="fas fa-envelop"></i>
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; KillingSpree Pvt. Ltd. | Designed by Kaushik Shetty , Isha Wadekar , Abhishek Shetty
+  </div>
+</div>
   </body>
-
 </html>

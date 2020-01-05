@@ -1,9 +1,13 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
+<?php include('server.php')?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Submit your article</title>
-    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <link rel = "stylesheet" type = "text/css" href = "styl.css">
     <script>
           function myFunction(){
             var x = document.getElementById("myFile");
@@ -28,21 +32,20 @@
           }
     </script>
   </head>
-
   <body onload="myFunction()">
-      <form method="post" enctype="multipart/form-data" class="upload-form">
-        <div class="split left">
-          <div class="centered">
-            <input type="file" id="myFile" name = "files" onchange="myFunction()" multiple
-              accept="application/msword, .docx">
-          </div>
-        </div>
-        <div class="split right">
-          <div class="centered">
-            <input type="submit" name="Upload" value="uploadFile">
-          </div>
-        </div>
 
-        <p id="demo" class="p"></p>
+      <form action = "server.php" method="post" enctype="multipart/form-data" class="upload-form">
+        <h2>Submit your Post</h2><br><br>
+        <h3>Title :</h3>
+        <br>
+        <input class="input" width="300px" type = "text" name="title"/><br>
+        <br>
+        <h3>Express</h3>
+            <br>
+            <input class="blogtext" type = "text" name = "blog"/>
+          </div>
+          <br>
+          <br><br>
+          <button type = "submit" class = "btn" name = "upload-form">SUBMIT</button>
   </body>
 </html>
